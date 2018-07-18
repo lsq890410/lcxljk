@@ -10,8 +10,8 @@ import org.springframework.stereotype.Controller;
 @ImportResource("classpath:transaction.xml")
 @MapperScan("com.lc.xljk")
 @Controller
-public class WxServerMvcApplication {
+public class XljkServerMvcApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(WxServerMvcApplication.class, args);
+		SpringApplication.run(XljkServerMvcApplication.class, args);
 	}
 }
