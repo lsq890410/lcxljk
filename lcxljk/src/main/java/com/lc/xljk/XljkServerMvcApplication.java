@@ -7,7 +7,7 @@ import org.springframework.context.annotation.ImportResource;
 import org.springframework.stereotype.Controller;
 
 @SpringBootApplication
-@ImportResource("classpath:transaction.xml")
+@ImportResource("classpath:xljktransation.xml")
 @MapperScan("com.lc.xljk")
 @Controller
 public class XljkServerMvcApplication {
