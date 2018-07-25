@@ -17,6 +17,7 @@ public class XljkProgramConfig {
 	private String appid;
 	private String appsecret;
 	private String wxsessionurl;
+	private String mock;
 	public String getSkey() {
 		return skey;
 	}
@@ -40,5 +41,11 @@ public class XljkProgramConfig {
 	}
 	public void setWxsessionurl(String wxsessionurl) {
 		this.wxsessionurl = wxsessionurl;
+	}
+	public String getMock() {
+		return mock;
+	}
+	public void setMock(String mock) {
+		this.mock = mock;
 	}
 }

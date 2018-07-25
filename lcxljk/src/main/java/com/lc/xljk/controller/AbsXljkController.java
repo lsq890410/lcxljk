@@ -1,5 +1,7 @@
 package com.lc.xljk.controller;
 
+import org.springframework.stereotype.Controller;
+
 import com.lc.xljk.pub.IXljkConstance;
 
 /**
@@ -8,6 +10,6 @@ import com.lc.xljk.pub.IXljkConstance;
  * @author lisq
  * @date 2018年7月15日
  */
-public class AbsXljkController implements IXljkConstance{
 
+public class AbsXljkController implements IXljkConstance{
 }

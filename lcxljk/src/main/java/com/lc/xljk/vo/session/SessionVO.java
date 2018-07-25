@@ -1,6 +1,6 @@
-package com.lc.xljk.vo.user;
+package com.lc.xljk.vo.session;
 
-public class UserVO {
+public class SessionVO {
 	
     private Integer id;
 

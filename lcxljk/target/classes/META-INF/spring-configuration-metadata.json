@@ -1,0 +1,37 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.lc.xljk.conf.XljkProgramConfig",
+      "name": "xljkapp",
+      "type": "com.lc.xljk.conf.XljkProgramConfig"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.lc.xljk.conf.XljkProgramConfig",
+      "name": "xljkapp.appid",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.lc.xljk.conf.XljkProgramConfig",
+      "name": "xljkapp.appsecret",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.lc.xljk.conf.XljkProgramConfig",
+      "name": "xljkapp.mock",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.lc.xljk.conf.XljkProgramConfig",
+      "name": "xljkapp.skey",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.lc.xljk.conf.XljkProgramConfig",
+      "name": "xljkapp.wxsessionurl",
+      "type": "java.lang.String"
+    }
+  ]
+}

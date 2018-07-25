@@ -6,19 +6,19 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.lc.xljk.dao.mapper.user.UserMapper;
+import com.lc.xljk.dao.mapper.session.SessionMapper;
 import com.lc.xljk.exception.BusinessException;
 import com.lc.xljk.pub.XljkClientTools;
 import com.lc.xljk.pub.lang.LCDateTime;
 import com.lc.xljk.service.AbsXljkService;
-import com.lc.xljk.vo.user.UserVO;
+import com.lc.xljk.vo.session.SessionVO;
 @Service
 public class XljkLoginService extends AbsXljkService{
 	@Autowired
-	private UserMapper userMapper;
+	private SessionMapper userMapper;
 	public String doLogin(Map<String,Object> result) throws BusinessException{
 		//1.先查到:根据openid查到用户
-		UserVO userVO = userMapper.getOneByOpenID((String)result.get(__S_OPENID));
+		SessionVO userVO = userMapper.getOneByOpenID((String)result.get(__S_OPENID));
 		if(userVO != null) {
 			//2.1 有就更新：sessionkey 返回：appsession
 			userVO.setSessionkey((String)result.get(__S_SESSIONKEY));
@@ -32,7 +32,7 @@ public class XljkLoginService extends AbsXljkService{
 	}
 	
 	public String doCheckSession(String appsession) {
-		UserVO userVO = userMapper.getOneByAppsession(appsession);
+		SessionVO userVO = userMapper.getOneByAppsession(appsession);
 		if(userVO != null) {
 			return appsession;
 		}
@@ -40,8 +40,8 @@ public class XljkLoginService extends AbsXljkService{
 	}
 	
 	
-	private UserVO createNewUser(Map<String,Object> result) {
-		UserVO user = new UserVO();
+	private SessionVO createNewUser(Map<String,Object> result) {
+		SessionVO user = new SessionVO();
 		user.setAppsession(XljkClientTools.getUUID().replace("-", ""));
 		user.setCreatetime(new LCDateTime(new Date()).toString());
 		user.setLastvisittime(new LCDateTime(new Date()).toString());
