@@ -5,6 +5,7 @@ public class SmscheckVO {
 	private String smscheckcode ;
 	private String createtime;
 	private String disabletime;
+	private String telno;
 	public String getSmscheckid() {
 		return smscheckid;
 	}
@@ -28,5 +29,11 @@ public class SmscheckVO {
 	}
 	public void setDisabletime(String disabletime) {
 		this.disabletime = disabletime;
+	}
+	public String getTelno() {
+		return telno;
+	}
+	public void setTelno(String telno) {
+		this.telno = telno;
 	}
 }

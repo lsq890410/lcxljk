@@ -5,6 +5,7 @@ public class UserVO {
 	private String userid;
 	private String usercode;
 	private String createtime;
+	private String appsession;
 	public String getTelno() {
 		return telno;
 	}
@@ -28,5 +29,11 @@ public class UserVO {
 	}
 	public void setCreatetime(String createtime) {
 		this.createtime = createtime;
+	}
+	public String getAppsession() {
+		return appsession;
+	}
+	public void setAppsession(String appsession) {
+		this.appsession = appsession;
 	}
 }

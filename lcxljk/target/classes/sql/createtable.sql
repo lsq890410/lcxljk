@@ -11,7 +11,7 @@ create table lc_sso_session(
 );
 
 create table lc_sm_user(
-	userid char 30 primary key,
+	userid char (32) primary key,
 	createtime char(19),
 	appsession varchar(50),
 	usercode varchar(50),
@@ -29,6 +29,7 @@ create table lc_pub_billno(
  
 create table lc_pub_smscheckcode(
 	smscheckid varchar(50),
+	telno varchar(20),
 	smscheckcode char(4),
 	createtime char(19),
 	disabletime char(19)

@@ -19,10 +19,11 @@ import com.lc.xljk.service.user.XljkUserService;
  * @date 2018年7月21日
  */
 @Controller
+@RequestMapping("/user")
 public class XljkUserController extends AbsXljkController{
 	@Autowired
 	private XljkUserService userService;
-	@RequestMapping("/user")
+	@RequestMapping("/add")
 	@ResponseBody
 	public String addUser(@NotNull @RequestParam("telNo") String telNo,@RequestHeader("appsession")String appsession) throws BusinessException{
 		return userService.addUserAction(telNo,appsession);

@@ -18,6 +18,11 @@ public class XljkClientTools  implements IXljkConstance{
 		return resultv;
 	}
 	
+	public static <T> WxClientResultVO<T> getSuccessObj() {
+		WxClientResultVO<T> resultv=new WxClientResultVO<T>();
+		return resultv;
+	}
+	
 	public static WxClientResultVO getFailObj(String msg){
 		WxClientResultVO resultVO = new WxClientResultVO();
 		resultVO.setResult_code(WX_CLIENT_RESULT_FAIL);

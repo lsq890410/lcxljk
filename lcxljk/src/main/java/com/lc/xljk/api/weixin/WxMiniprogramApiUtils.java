@@ -35,7 +35,7 @@ public class WxMiniprogramApiUtils {
 	public HashMap<String,Object> doWxApilogin(String requestCode) throws BusinessException{
 		if(Boolean.valueOf(wxServerConfig.getMock()).booleanValue()) {
 			HashMap<String,Object> weixinMock = new HashMap<String, Object>();
-			weixinMock.put(IXljkConstance.__S_OPENID, UUID.randomUUID());
+			weixinMock.put(IXljkConstance.__S_OPENID, UUID.randomUUID().toString());
 			return weixinMock;
 		}
 		String url = wxServerConfig.getWxsessionurl()+"?grant_type=authorization_code&appid="+wxServerConfig.getAppid()

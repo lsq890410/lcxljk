@@ -13,6 +13,8 @@ import com.lc.xljk.vo.user.UserVO;
 public class XljkUserService {
 	@Autowired
 	private UserMapper userMapper;
+	@Autowired
+	private BillnoTools billNoTools;
 	public String addUserAction(String telNo,String appsession) throws BusinessException {
 		//	1. 判断用户存在不存在
 		UserVO userVO = userMapper.getOneByTelNo(telNo);
@@ -23,8 +25,9 @@ public class XljkUserService {
 		//  3. 不存在注册用户并且返回用户编码
 		userVO = new UserVO();
 		userVO.setTelno(telNo);
-		userVO.setUsercode(new BillnoTools().getUserCode());
+		userVO.setUsercode(billNoTools.getUserCode());
 		userVO.setUserid(XljkClientTools.getUUID());
+		userVO.setAppsession(appsession);
 		userMapper.insertUserVO(userVO);
 		return userVO.getUsercode();
 	}
