@@ -37,6 +37,7 @@ public class XljkSmsCheckController extends AbsXljkController{
 		return XljkClientTools.getSuccessObj("smscode", smscode);
 	}
 	
+	
 	@RequestMapping("/check")
 	@ResponseBody
 	public WxClientResultVO sendSmsCheck(@NotNull @RequestParam("telNo") String code,@NotNull @RequestParam("smscode") String smscode) throws BusinessException {
